@@ -4,7 +4,9 @@
 
 ### Development Enviroment
 Linux Ubuntu 20.04
-Python3.8
+
+go version go1.13.8 linux/amd64
+
 
 ### Instructions
     1. Install `pq`
@@ -16,4 +18,4 @@ I used pq library to retrieve data from database and encoding to marshal it as j
 
 
 ### Output Sample
-![JSON-output](./images/Screenshot%20from%202023-01-15%2008-14-58.png)
+![JSON-output](./images/Screenshot%20from%202023-01-17%2000-24-26.png)

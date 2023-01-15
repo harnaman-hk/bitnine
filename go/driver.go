@@ -39,6 +39,7 @@ func main() {
 	CheckError(e)
 	
 	var jsonData []*schema
+	fmt.Println("Row wise reads from DB")
 	for rows.Next() {
 		r := new(schema)
 		err := rows.Scan(&r.user_id, &r.name, &r.age, &r.phone)
@@ -47,9 +48,10 @@ func main() {
 		jsonData = append(jsonData, r)
 	}
 	CheckError(err)
-
+	
 	m, merr := json.Marshal(jsonData)
 	CheckError(merr)
+	fmt.Println("\nJSON format output")
 	fmt.Println(jsonData)
 	fmt.Println(string(m))
 }
